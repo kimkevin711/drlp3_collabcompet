@@ -9,6 +9,7 @@ import torch
 import torch.nn.functional as F
 import torch.optim as optim
 
+<<<<<<< HEAD
 BUFFER_SIZE = int(1e8)  # replay buffer size
 BATCH_SIZE = 400        # minibatch size
 GAMMA = 0.99            # discount factor
@@ -17,6 +18,18 @@ LR_ACTOR = 2e-6         # learning rate of the actor
 LR_CRITIC = 1e-6        # learning rate of the critic
 WEIGHT_DECAY = 0        # L2 weight decay
 UPDATE_EVERY = 3       # how often to update the network
+=======
+BUFFER_SIZE = int(1e7)  # replay buffer size
+BATCH_SIZE = 256        # minibatch size
+GAMMA = 0.99            # discount factor
+TAU = 1.5e-3              # for soft update of target parameters
+# LR_ACTOR = 1e-4         # learning rate of the actor 
+# LR_CRITIC = 1e-3        # learning rate of the critic
+LR_ACTOR = 8e-5         # learning rate of the actor 
+LR_CRITIC = 4e-3        # learning rate of the critic
+WEIGHT_DECAY = 0        # L2 weight decay
+UPDATE_EVERY = 1       # how often to update the network
+>>>>>>> 2b10cadf3387f42165f97ac03f0d9d5c93e6c137
 
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
